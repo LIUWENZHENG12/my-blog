@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>劉文正 - 資訊技師考前重點</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #1e3a56;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        header img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border: 4px solid white;
+        }
+        nav {
+            background-color: #294a66;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            background-color: #1e3a56;
+        }
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        section {
+            margin-bottom: 40px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            border-bottom: 3px solid #e74c3c;
+            padding-bottom: 10px;
+        }
+        footer {
+            background-color: #1e3a56;
+            color: #bdc3c7;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .project-card {
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            background-color: #fff;
+        }
+        /* === 新增考前重點樣式 === */
+        #exam {
+          background: #fefefe;
+          border-radius: 10px;
+          padding: 20px;
+          box-shadow: 0 0 8px rgba(0,0,0,0.1);
+        }
+        #exam h2 {
+          border-left: 5px solid #e74c3c;
+          padding-left: 10px;
+        }
+        .day-card {
+          background: #fff;
+          padding: 15px;
+          border-radius: 8px;
+          margin-top: 15px;
+          box-shadow: 0 0 6px rgba(0,0,0,0.05);
+        }
+        .day-card h3 { color: #1e3a56; margin-top: 0; }
+        .day-card ul { margin: 0; padding-left: 20px; }
+        @media (max-width: 600px) {
+          #exam { padding: 15px; }
+          nav { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+
+<body>
+<!-- 聊天機器人對話框 -->
+<div id="chatbot-container" style="
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 350px;
+    height: 500px;
+    background-color: white;
+    border: 2px solid #1e3a56;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+">
+    <div id="chatbot-messages" style="padding: 10px; height: 420px; overflow-y: auto;"></div>
+    <div style="display: flex; border-top: 1px solid #ccc;">
+        <input type="text" id="chatbot-input" placeholder="輸入訊息..." style="flex: 1; padding: 10px; border: none;">
+        <button id="chatbot-send" style="padding: 10px; background-color: #1e3a56; color: white;">送出</button>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/luxon@3.0.3/build/global/luxon.min.js"></script>
+<script src="chatbot.js"></script>
+
+<header>
+    <img src="images.jpg"劉文正">
+    <h1>劉文正</h1>
+    <p>探索資訊與機電的世界，學習與成長永不止步</p>
+</header>
+
+<nav>
+    <a href="#about">關於我</a>
+    <a href="#experience">工作經歷</a>
+    <a href="#projects">作品集</a>
+    <a href="#exam">考前重點</a>
+    <a href="#contact">聯繫方式</a>
+</nav>
+
+<main>
+    <section id="about">
+        <h2>關於我</h2>
+        <p>畢業於台北城市科技大學資訊工程系，東海高中電子科，熱愛學習與挑戰新技術。</p>
+        <p>擁有機電維修與資訊工程背景，熟悉程式開發與系統維護。</p>
+    </section>
+
+    <section id="experience">
+        <h2>工作經歷</h2>
+        <div class="project-card">
+            <h3>機電技師／工程師 - 華科機電有限公司</h3>
+            <p><strong>2024.9 - 2024.12</strong></p>
+            <p>負責大樓水機電設備維護，解決日常維修需求。</p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>個人作品集</h2>
+        <div class="project-card">
+            <h3>學生分數紀錄器 (C 語言)</h3>
+            <p>包含新增、刪除、查詢、修改與列出學生資訊的功能。</p>
+            <p><a href="https://youtu.be/TDzBz_ij1eE" target="_blank">查看程式碼</a></p>
+        </div>
+    </section>
+
+    <!-- ✅ 新增的考前重點區塊 -->
+    <section id="exam">
+      <h2>考前重點</h2>
+      <p>📘 資訊技師考前 10 天背誦重點表 — 手機 / 電腦皆可瀏覽</p>
+
+      <div class="day-card"><h3>第 1 天：資料結構與演算法</h3>
+        <ul><li>Stack：LIFO</li><li>Queue：FIFO</li><li>Tree：左小右大</li><li>Big O：O(1)、O(n)、O(n log n)</li><li>Hash Table：Collision、Chaining</li></ul>
+      </div>
+
+      <div class="day-card"><h3>第 2 天：作業系統</h3>
+        <ul><li>Process 狀態：Ready → Running → Waiting</li><li>Deadlock 四要件</li><li>Paging、Segmentation</li><li>CPU 排程：FCFS、SJF、Round Robin</li></ul>
+      </div>
+
+      <div class="day-card"><h3>第 3 天：計算機結構</h3>
+        <ul><li>CPU 組成：ALU、CU、Register</li><li>Pipeline：指令平行處理</li><li>Cache：Locality of Reference</li><li>指令集：RISC / CISC</li></ul>
+      </div>
+
+      <div class="day-card"><h3>第 4 天：資料庫系統</h3>
+        <ul><li>ER 模型：Entity、Attribute、Relationship</li><li>SQL：SELECT、INSERT、UPDATE、DELETE</li><li>Transaction：ACID 原則</li><li>Normalization：1NF～3NF</li></ul>
+      </div>
+
+      <div class="day-card"><h3>第 5 天：軟體工程</h3>
+        <ul><li>SDLC：需求 → 設計 → 實作 → 測試 → 維護</li><li>UML：用例圖、類別圖</li><li>Agile：快速迭代、客戶參與</li><li>Testing：單元／整合／系統／驗收</li></ul>
+      </div>
+
+      <div class="day-card"><h3>第 6 天：網路概論</h3>
+        <ul><li>OSI 七層：應表會傳網資實</li><li>TCP/IP 四層：應用、傳輸、網際、網路存取</li><li>DNS、DHCP、Routing（RIP、OSPF）</li></ul>
+      </div>
+
+      <div class="day-card"><h3>第 7 天：資訊安全</h3>
+        <ul><li>CIA：機密性、完整性、可用性</li><li>加密：AES、RSA</li><li>雜湊：MD5、SHA</li><li>防火牆、IDS/IPS、DoS、防駭意識</li></ul>
+      </div>
+
+      <div class="day-card"><h3>第 8 天：法規與倫理</h3>
+        <ul><li>技師法：須經考試登錄</li><li>個資法：合法目的、保護隱私</li><li>資通安全法：安全等級管理</li><li>工程倫理：誠信、公正、社會責任</li></ul>
+      </div>
+
+      <div class="day-card"><h3>第 9 天：國文與作文</h3>
+        <ul><li>主題建議：資訊倫理、科技與人性</li><li>作文開頭：「科技進步固然便利，然倫理思考不可忽略。」</li><li>公文三段式：主旨、說明、辦法</li></ul>
+      </div>
+
+      <div class="day-card"><h3>第 10 天：總複習</h3>
+        <ul><li>默背每科 10 題關鍵字</li><li>Chatbot 練題模式複習</li><li>考前休息、維持節奏</li></ul>
+      </div>
+    </section>
+
+    <section id="contact">
+        <h2>聯繫方式</h2>
+        <p><strong>Email：</strong><a href="mailto:s0960514@gmail.com">s0960514@gmail.com</a></p>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 劉文正 | 版權所有 翻印必究</p>
+</footer>
+</body>
+</html>
